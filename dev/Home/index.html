@@ -95,6 +95,12 @@
             // fullscreenButton.onclick = () => {
             //   unityInstance.SetFullscreen(1);
             // };
+            
+            xButton.onclick = () => 
+            {
+              unityInstance.SendMessage('AppGameManager', 'OnHtmlXButtonClicked' );
+            };
+
             window.addEventListener
             (
               'resize', function()
@@ -104,12 +110,6 @@
 
                 unityInstance.SendMessage('AppGameManager', 'ChangeScreenWidth', window.innerWidth );
                 unityInstance.SendMessage('AppGameManager', 'ChangeScreenHeight', window.innerHeight );
-
-                
-                xButton.onclick = () => 
-                {
-                  unityInstance.SendMessage('AppGameManager', 'OnHtmlXButtonClicked' );
-                }
               }
             );
           })
