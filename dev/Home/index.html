@@ -12,7 +12,7 @@
     <div id="buttons">
       <button id="startButton" type="button">Start</button>
       <!-- <button id="linkButton" type=“button” onclick="location.href='https://daijimomii.github.io/WebGl_PVSample_Info/'">ページリンク</button> -->
-      <button id="xButton" type="button">X</button>
+      <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="button"/></button>
     </div>
 
     <div id="unity-container" class="unity-desktop">
@@ -53,7 +53,7 @@
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       var startButton = document.querySelector("#startButton");
-      var xButton = document.querySelector("#xButton");
+      var initButton = document.querySelector("#initButton");
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -92,13 +92,15 @@
           .then((unityInstance) => 
           {
             loadingBar.style.display = "none";
+            initButton.style.display = "block";
             // fullscreenButton.onclick = () => {
             //   unityInstance.SetFullscreen(1);
             // };
             
-            xButton.onclick = () => 
+            initButton.onclick = () => 
             {
-              unityInstance.SendMessage('AppGameManager', 'OnHtmlXButtonClicked' );
+              unityInstance.SendMessage('AppGameManager', 'OnHtmlInitButtonClicked' );
+              initButton.style.display = "none";
             };
 
             window.addEventListener
