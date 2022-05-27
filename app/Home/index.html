@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,6 +12,7 @@
     <div id="buttons">
       <button id="startButton" type="button">Start</button>
       <!-- <button id="linkButton" type=“button” onclick="location.href='https://daijimomii.github.io/WebGl_PVSample_Info/'">ページリンク</button> -->
+      <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="button"/></button>
     </div>
 
     <div id="unity-container" class="unity-desktop">
@@ -52,6 +53,7 @@
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       var startButton = document.querySelector("#startButton");
+      var initButton = document.querySelector("#initButton");
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -90,9 +92,19 @@
           .then((unityInstance) => 
           {
             loadingBar.style.display = "none";
+            initButton.style.display = "block";
             // fullscreenButton.onclick = () => {
             //   unityInstance.SetFullscreen(1);
             // };
+
+            unityInstance.SendMessage('AppGameManager', 'OnAppStarted' );
+            
+            initButton.onclick = () => 
+            {
+              unityInstance.SendMessage('AppGameManager', 'OnHtmlInitButtonClicked' );
+              initButton.style.display = "none";
+            };
+
             window.addEventListener
             (
               'resize', function()
@@ -101,7 +113,6 @@
                 console.log("Height:" + window.innerHeight);
 
                 unityInstance.SendMessage('AppGameManager', 'ChangeScreenWidth', window.innerWidth );
-
                 unityInstance.SendMessage('AppGameManager', 'ChangeScreenHeight', window.innerHeight );
               }
             );
@@ -113,6 +124,7 @@
         };
         document.body.appendChild(script);
       }
+
     </script>
   </body>
 </html>
