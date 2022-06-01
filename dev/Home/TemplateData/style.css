@@ -159,8 +159,8 @@ body
 #soundButton,
 #muteButton
 {
-    /* height: 100%;
-    width: 00px;  */
+    height: auto;
+    width: auto;
     
     /* height: auto;
     max-width: 100%; */
@@ -182,11 +182,11 @@ body
     cursor:pointer;
 }
 
-.headerButton
+/* .headerButton
 {
     height: 100%;
     width: auto; 
-}
+} */
 
 #buttonImage
 {    
