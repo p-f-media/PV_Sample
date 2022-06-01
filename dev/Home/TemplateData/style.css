@@ -150,15 +150,15 @@ body
     position: absolute; 
 
     
-    /* background-color:aqua; */
+    background-color:aqua;
 }
 
 #menuButton,
 #soundButton,
 #muteButton
 {
-    /* width: 200px; 
-    height: 80px; */
+    /* width: 200px;  */
+    height: 100%;
     /* position: absolute;  */
     /* left: 10%; 
     top: 10%;  */
@@ -168,7 +168,7 @@ body
     display: block;    
 
     padding:0;
-    margin: 10px;
+    margin: 0 0.5% 0 0.5%;
     background:none;
     border:0;
     font-size:0;
