@@ -67,9 +67,9 @@
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
       {
         var _a = window.innerHeight / 10;
-        menuButton.style.height = "auto";
-        soundButton.style.height = "auto";
-        soundButton.style.height = "auto";
+        menuButton.style.height = _a.toString() + "px";
+        soundButton.style.height = _a.toString() + "px";
+        soundButton.style.height = _a.toString() + "px";
         window.alert( _a );
       }
       else
@@ -82,7 +82,9 @@
         'resize', function()
         {
           var _a = window.innerHeight / 10;
-          window.alert( _a );
+          menuButton.style.height = _a.toString() + "px";
+          soundButton.style.height = _a.toString() + "px";
+          soundButton.style.height = _a.toString() + "px";
         }
       );
 
