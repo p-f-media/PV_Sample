@@ -149,9 +149,9 @@ body
     align-items: flex-start;
     position: absolute; 
 
-    /* align-items: center; */
+    -webkit-text-size-adjust:100%;
     
-    /* background-color:aqua; */
+    background-color:aqua;
 }
 
 #menuButton,
@@ -160,6 +160,7 @@ body
 {
     /* width: 200px;  */
     height: auto;
+    max-height:100%;
     /* position: absolute;  */
     /* left: 10%; 
     top: 10%;  */
