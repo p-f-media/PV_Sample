@@ -63,17 +63,28 @@
       var soundButton = document.querySelector("#soundButton");
       var muteButton = document.querySelector("#muteButton");
 
-      var headerButton = document.querySelector(".headerButton");
 
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
       {
-        headerButton.style.height = "auto";
-        window.alert( _st );
+        var _a = window.innerHeight / 10;
+        menuButton.style.height = "auto";
+        soundButton.style.height = "auto";
+        soundButton.style.height = "auto";
+        window.alert( _a );
       }
       else
       {
         window.alert( "else" );
       }
+
+      window.addEventListener
+      (
+        'resize', function()
+        {
+          var _a = window.innerHeight / 10;
+          window.alert( _a );
+        }
+      );
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
