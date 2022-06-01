@@ -149,6 +149,7 @@ body
     align-items: flex-start;
     position: absolute; 
 
+    align-items: center;
     
     /* background-color:aqua; */
 }
