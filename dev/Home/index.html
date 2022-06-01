@@ -68,8 +68,9 @@
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
       {
         var _w = window.innerHeight / 10;
-        headerButton.style.width = _w.toString + "px";
-        window.alert( _w.toString + "px" );
+        var _st = _w.toString() + "px";
+        headerButton.style.width = _st;
+        window.alert( _st );
       }
       else
       {
