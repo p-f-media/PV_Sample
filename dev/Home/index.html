@@ -14,9 +14,9 @@
       <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="informationImg"/></button>
 
       <div id="menu">
-        <button id="menuButton" type="button"><img id="buttonImage" src="TemplateData/menuIcon.png" alt="menuButton"/></button>
-        <button id="soundButton" type="button"><img id="buttonImage" src="TemplateData/soundButton.png" alt="soundButton"/></button>
-        <button id="muteButton" type="button"><img id="buttonImage" src="TemplateData/muteButton.png" alt="muteButton"/></button>
+        <button id="menuButton" class="headerButton" type="button"><img id="buttonImage" src="TemplateData/menuIcon.png" alt="menuButton"/></button>
+        <button id="soundButton" class="headerButton" type="button"><img id="buttonImage" src="TemplateData/soundButton.png" alt="soundButton"/></button>
+        <button id="muteButton" class="headerButton" type="button"><img id="buttonImage" src="TemplateData/muteButton.png" alt="muteButton"/></button>
       </div>
     </div>
 
@@ -62,6 +62,19 @@
       var menuButton = document.querySelector("#menuButton");
       var soundButton = document.querySelector("#soundButton");
       var muteButton = document.querySelector("#muteButton");
+
+      var headerButton = document.querySelector(".headerButton");
+
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
+      {
+        var _w = window.innerHeight / 10;
+        headerButton.style.width = _w;
+        window.alert( _w );
+      }
+      else
+      {
+        window.alert( "else" );
+      }
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
