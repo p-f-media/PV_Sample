@@ -11,8 +11,13 @@
 
     <div id="buttons">
       <button id="startButton" type="button">Start</button>
-      <!-- <button id="linkButton" type=“button” onclick="location.href='https://daijimomii.github.io/WebGl_PVSample_Info/'">ページリンク</button> -->
-      <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="button"/></button>
+      <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="informationImg"/></button>
+
+      <div id="menu">
+        <button id="menuButton" type="button"><img src="TemplateData/menuIcon.png" alt="menuButton"/></button>
+        <button id="soundButton" type="button"><img src="TemplateData/soundButton.png" alt="soundButton"/></button>
+        <button id="muteButton" type="button"><img src="TemplateData/muteButton.png" alt="muteButton"/></button>
+      </div>
     </div>
 
     <div id="unity-container" class="unity-desktop">
@@ -54,6 +59,9 @@
 
       var startButton = document.querySelector("#startButton");
       var initButton = document.querySelector("#initButton");
+      var menuButton = document.querySelector("#menuButton");
+      var soundButton = document.querySelector("#soundButton");
+      var muteButton = document.querySelector("#muteButton");
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -76,6 +84,21 @@
         // canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
+
+      menuButton.onclick = () =>
+      {
+        window.alert( "menu" );
+      };
+
+      soundButton.onclick = () =>
+      {
+        window.alert( "sound" );
+      };
+
+      muteButton.onclick = () =>
+      {
+        window.alert( "mute" );
+      };
 
       startButton.onclick = () => 
       {
