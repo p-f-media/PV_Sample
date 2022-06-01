@@ -14,9 +14,9 @@
       <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="informationImg"/></button>
 
       <div id="menu">
-        <button id="menuButton" class="headerButton" type="button"><img id="buttonImage" src="TemplateData/menuIcon.png" alt="menuButton"/></button>
-        <button id="soundButton" class="headerButton" type="button"><img id="buttonImage" src="TemplateData/soundButton.png" alt="soundButton"/></button>
-        <button id="muteButton" class="headerButton" type="button"><img id="buttonImage" src="TemplateData/muteButton.png" alt="muteButton"/></button>
+        <button id="menuButton" type="button"><img id="buttonImage" src="TemplateData/menuIcon.png" alt="menuButton"/></button>
+        <button id="soundButton" type="button"><img id="buttonImage" src="TemplateData/soundButton.png" alt="soundButton"/></button>
+        <button id="muteButton" type="button"><img id="buttonImage" src="TemplateData/muteButton.png" alt="muteButton"/></button>
       </div>
     </div>
 
@@ -66,27 +66,27 @@
 
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
       {
-        var _a = window.innerHeight / 10;
-        menuButton.style.height = _a.toString() + "px";
-        soundButton.style.height = _a.toString() + "px";
-        soundButton.style.height = _a.toString() + "px";
-        window.alert( _a );
+        // var _a = window.innerHeight / 10;
+        // menuButton.style.height = _a.toString() + "px";
+        // soundButton.style.height = _a.toString() + "px";
+        // soundButton.style.height = _a.toString() + "px";
+        // window.alert( _a );
       }
       else
       {
-        window.alert( "else" );
+        // window.alert( "else" );
       }
 
-      window.addEventListener
-      (
-        'resize', function()
-        {
-          var _a = window.innerHeight / 10;
-          menuButton.style.height = _a.toString() + "px";
-          soundButton.style.height = _a.toString() + "px";
-          soundButton.style.height = _a.toString() + "px";
-        }
-      );
+      // window.addEventListener
+      // (
+      //   'resize', function()
+      //   {
+      //     var _a = window.innerHeight / 10;
+      //     menuButton.style.height = _a.toString() + "px";
+      //     soundButton.style.height = _a.toString() + "px";
+      //     soundButton.style.height = _a.toString() + "px";
+      //   }
+      // );
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
