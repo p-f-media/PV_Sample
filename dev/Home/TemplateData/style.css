@@ -146,6 +146,7 @@ body
     position: absolute; 
     z-index: 10; 
     display: flex;
+    align-items: flex-start;
     position: absolute; 
 
     
