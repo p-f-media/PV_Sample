@@ -139,8 +139,8 @@ body
 
 #menu
 {
-    width: 90%;
-    height: 10%;
+    /* width: 90%;
+    height: 10%; */
     left: 5%;
     top: 0%;
     position: absolute; 
@@ -159,8 +159,8 @@ body
 #soundButton,
 #muteButton
 {
-    height: 100%;
-    width: auto;
+    height: 100px;
+    width: 100px;
     
     /* height: auto;
     max-width: 100%; */
