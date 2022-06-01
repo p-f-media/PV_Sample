@@ -158,8 +158,8 @@ body
 #soundButton,
 #muteButton
 {
-    width: auto; 
-    max-height: 100%;
+    /* width: auto; 
+    max-height: 100%; */
     /* height: auto;
     max-width: 100%; */
     /* position: absolute;  */
