@@ -16,7 +16,7 @@
       <div id="menu">
         <button id="menuButton" type="button"><img id="buttonImage" src="TemplateData/menuIcon.png" alt="menuButton"/></button>
         <button id="soundButton" type="button"><img id="buttonImage" src="TemplateData/soundButton.png" alt="soundButton"/></button>
-        <button id="muteButton" type="button"><img id="buttonImage" src="TemplateData/muteButton.png" alt="muteButton"/></button>
+        <button id="muteButton" type="button"><img id="buttonImageMute" src="TemplateData/muteButton.png" alt="muteButton"/></button>
       </div>
     </div>
 
@@ -57,6 +57,7 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
+      var menu = document.querySelector("#menu");
       var startButton = document.querySelector("#startButton");
       var initButton = document.querySelector("#initButton");
       var menuButton = document.querySelector("#menuButton");
@@ -137,6 +138,7 @@
         // canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
+      menu.style.display = "none";
 
       menuButton.onclick = () =>
       {
@@ -167,6 +169,7 @@
           })
           .then((unityInstance) => 
           {
+            menu.style.display = "flex";
             loadingBar.style.display = "none";
             initButton.style.display = "block";
             // fullscreenButton.onclick = () => {
