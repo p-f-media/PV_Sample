@@ -138,6 +138,7 @@
         // canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
+      // ヘッダーメニューは開始前は非表示.
       menu.style.display = "none";
 
       menuButton.onclick = () =>
@@ -169,7 +170,10 @@
           })
           .then((unityInstance) => 
           {
+            // ヘッダーメニュー最初はMuteされてる状態（MenuとMuteOn状態のボタンのみ）のMenuを表示.
             menu.style.display = "flex";
+            soundButton.style.display = "none";
+
             loadingBar.style.display = "none";
             initButton.style.display = "block";
             // fullscreenButton.onclick = () => {
