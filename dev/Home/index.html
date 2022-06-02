@@ -141,21 +141,6 @@
       // ヘッダーメニューは開始前は非表示.
       menu.style.display = "none";
 
-      menuButton.onclick = () =>
-      {
-        window.alert( "menu" );
-      };
-
-      soundButton.onclick = () =>
-      {
-        window.alert( "sound" );
-      };
-
-      muteButton.onclick = () =>
-      {
-        window.alert( "mute" );
-      };
-
       startButton.onclick = () => 
       {
         startButton.style.display = "none";
@@ -200,6 +185,27 @@
                 unityInstance.SendMessage('AppGameManager', 'ChangeScreenHeight', window.innerHeight );
               }
             );
+
+
+            // ヘッダーメニューボタン.
+            menuButton.onclick = () =>
+            {
+              window.alert( "menu" );
+            };
+
+            soundButton.onclick = () =>
+            {
+              window.alert( "sound" );
+            };
+
+            muteButton.onclick = () =>
+            {
+              // window.alert( "mute" );
+              unityInstance.SendMessage('AppGameManager', 'OnHtmlMuteButtonClicked' );
+            };
+
+
+
           })
           .catch((message) => 
           {
