@@ -64,9 +64,13 @@
       var muteButton = document.querySelector("#muteButton");
 
 
-      function _resize()
+      function _resize( portraitMagnification, landscapeMagnification )
       {
-        var _a = window.innerHeight / 10;
+        var _magnification = 10;
+        if( window.innerWidth > window.innerHeight ) _magnification = landscapeMagnification;
+        else _magnification = portraitMagnification;
+
+        var _a = window.innerHeight / _magnification;
         menuButton.style.height = _a.toString() + "px";
         menuButton.style.width = _a.toString() + "px";
         soundButton.style.height = _a.toString() + "px";
@@ -77,24 +81,39 @@
         // window.alert( "resize" + _a.toString() );
       }
 
+      
+      var _pm = 10;
+      var _lm = 10;
 
-      _resize();         
+      // スマホ.
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+      {     
+        _pm = 8;
+        _lm = 12;   
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
+        { 
+          // ios.         
+        }
+        else
+        {
+          // Android.
+        }
+      }
+      else
+      {
+        // PC.
+        _pm = 10;
+        _lm = 10;
+      }
 
+      _resize( _pm, _lm );
       window.addEventListener
       (
         'resize', function()
         {
-          _resize();
+          _resize( _pm, _lm );
         }
       );
-
-      
-      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
-      {        
-      }
-      else
-      {
-      }
 
 
       // By default Unity keeps WebGL canvas render target size matched with
