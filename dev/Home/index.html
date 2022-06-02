@@ -77,27 +77,23 @@
         // window.alert( "resize" + _a.toString() );
       }
 
-      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
-      {
-        _resize();         
 
-        window.addEventListener
-        (
-          'resize', function()
-          {
-            _resize();
-          }
-        );
+      _resize();         
+
+      window.addEventListener
+      (
+        'resize', function()
+        {
+          _resize();
+        }
+      );
+
+      
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) 
+      {        
       }
       else
       {
-        menuButton.style.height = "100%";
-        menuButton.style.width = "auto";
-        soundButton.style.height = "100%";
-        soundButton.style.width ="auto";
-        muteButton.style.height = "100%";
-        muteButton.style.width = "auto";
-
       }
 
 

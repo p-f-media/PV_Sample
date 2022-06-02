@@ -147,9 +147,8 @@ body
     align-items: center;
     position: absolute; 
 
-    /* -webkit-text-size-adjust:100%; */
-    
-    background-color:aqua;
+    /* -webkit-text-size-adjust:100%; */    
+    /* background-color:aqua; */
 }
 
 
@@ -160,13 +159,6 @@ body
     height: 100px;
     width: 100px;
     
-    /* height: auto;
-    max-width: 100%; */
-    /* position: absolute;  */
-    /* left: 10%; 
-    top: 10%;  */
-    /* transform: translate(-50%, -50%);  */
-    /* z-index: 10;  */
     pointer-events: auto ;
     display: block;    
 
@@ -178,13 +170,12 @@ body
     line-height:0;
     overflow:visible;
     cursor:pointer;
+    
+    /* position: absolute;  */
+    /* transform: translate(-50%, -50%);  */
+    /* z-index: 10;  */
 }
 
-/* .headerButton
-{
-    height: 100%;
-    width: auto; 
-} */
 
 #buttonImage
 {    
