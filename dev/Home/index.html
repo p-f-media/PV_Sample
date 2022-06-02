@@ -64,13 +64,13 @@
       var muteButton = document.querySelector("#muteButton");
 
 
-      function _resize( portraitMagnification, landscapeMagnification )
+      function _resize( portraitRatio, landscapeRatio )
       {
-        var _magnification = 10;
-        if( window.innerWidth > window.innerHeight ) _magnification = landscapeMagnification;
-        else _magnification = portraitMagnification;
+        var _ratio = 10;
+        if( window.innerWidth > window.innerHeight ) _ratio = landscapeRatio;
+        else _ratio = portraitRatio;
 
-        var _a = window.innerHeight / _magnification;
+        var _a = window.innerHeight / _ratio;
         menuButton.style.height = _a.toString() + "px";
         menuButton.style.width = _a.toString() + "px";
         soundButton.style.height = _a.toString() + "px";
@@ -78,18 +78,18 @@
         muteButton.style.height = _a.toString() + "px";
         muteButton.style.width = _a.toString() + "px";
 
-        window.alert( "resize" + _magnification );
+        // window.alert( "resize" + _ratio );
       }
 
       
-      var _pm = 10;
-      var _lm = 10;
+      var _pRatio = 10;
+      var _lRatio = 10;
 
       // スマホ.
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
       {     
-        _pm = 6;
-        _lm = 15;   
+        _pRatio = 12;
+        _lRatio = 8;   
         if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
         { 
           // ios.         
@@ -102,16 +102,16 @@
       else
       {
         // PC.
-        _pm = 10;
-        _lm = 10;
+        _pRatio = 10;
+        _lRatio = 10;
       }
 
-      _resize( _pm, _lm );
+      _resize( _pRatio, _lRatio );
       window.addEventListener
       (
         'resize', function()
         {
-          _resize( _pm, _lm );
+          _resize( _pRatio, _lRatio );
         }
       );
 
