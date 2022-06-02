@@ -160,19 +160,22 @@
             soundButton.style.display = "none";
 
             loadingBar.style.display = "none";
-            initButton.style.display = "block";
+            // initButton.style.display = "block";
+
             // fullscreenButton.onclick = () => {
             //   window.vuplex.SetFullscreen(1)/*https://support.vuplex.com/articles/webgl-fullscreen*/;
             //   window.vuplex.SetFullscreen(1)/*https://support.vuplex.com/articles/webgl-fullscreen*/;
             // };
-
+              
+            // 
             unityInstance.SendMessage('AppGameManager', 'OnAppStarted' );
             
-            initButton.onclick = () => 
-            {
-              unityInstance.SendMessage('AppGameManager', 'OnHtmlInitButtonClicked' );
-              initButton.style.display = "none";
-            };
+            // initButton.onclick = () => 
+            // {
+            //   unityInstance.SendMessage('AppGameManager', 'OnHtmlInitButtonClicked' );
+            //   initButton.style.display = "none";
+            // };
+            
 
             window.addEventListener
             (
