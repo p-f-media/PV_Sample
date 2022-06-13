@@ -19,11 +19,11 @@
       </div>
     </div>
 
-    <div id="volume">
+    <!-- <div id="volume">
       <img id="sliderBg" src="TemplateData/SoundVolumeBase.png">
       <input type="range" id="slider" name="volume" min="0" max="11">
       <img id="soundIcon" src="TemplateData/SoundIcon.png">
-    </div>
+    </div> -->
 
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -85,15 +85,15 @@
         muteButton.style.width = _a.toString() + "px";
 
         
-        var targetElement = document.getElementById( "soundButton" ) ;
-        var clientRect = targetElement.getBoundingClientRect() ;
-        var x = clientRect.left ;
-        var y = clientRect.top ;
+        // var targetElement = document.getElementById( "soundButton" ) ;
+        // var clientRect = targetElement.getBoundingClientRect() ;
+        // var x = clientRect.left ;
+        // var y = clientRect.top ;
 
-        var volume = document.getElementById( "volume" ) ;
-        var X = parseInt( x ) - ( _a * 0.5 );
-        var stX = X.toString() + "px";
-        volume.style.left = stX;
+        // var volume = document.getElementById( "volume" ) ;
+        // var X = parseInt( x ) - ( _a * 0.5 );
+        // var stX = X.toString() + "px";
+        // volume.style.left = stX;
         // console.log( _a );
 
         // window.alert( "resize" + _ratio );
@@ -214,19 +214,18 @@
             menuButton.onclick = () =>
             {
               // window.alert( "menu" );
-              // unityInstance.SendMessage('AppGameManager', 'OnHtmlMenuButtonClicked' );
               unityInstance.SendMessage('HtmlReceiver', 'OnHTML_MenuButtonClicked' );
             };
 
             soundButton.onclick = () =>
             {
               window.alert( "sound ボタン. 準備中" );
+              unityInstance.SendMessage('HtmlReceiver', 'OnHTML_SoundButtonClicked' );
             };
 
             muteButton.onclick = () =>
             {
               // window.alert( "mute" );
-              // unityInstance.SendMessage('AppGameManager', 'OnHtmlMuteButtonClicked' );
               unityInstance.SendMessage('HtmlReceiver', 'OnHTML_MuteButtonClicked' );
             };
 
