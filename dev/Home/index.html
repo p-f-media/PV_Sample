@@ -11,13 +11,18 @@
 
     <div id="buttons">
       <button id="startButton" type="button">Start</button>
-      <!-- <button id="initButton" type="button"><img src="TemplateData/initImage.png" alt="informationImg"/></button> -->
 
       <div id="header">
         <button id="menuButton" type="button"><img id="buttonImage" src="TemplateData/menuIcon.png" alt="menuButton"/></button>
         <button id="soundButton" type="button"><img id="buttonImage" src="TemplateData/soundButton.png" alt="soundButton"/></button>
         <button id="muteButton" type="button"><img id="buttonImageMute" src="TemplateData/muteButton.png" alt="muteButton"/></button>
       </div>
+    </div>
+
+    <div id="volume">
+      <img id="sliderBg" src="TemplateData/SoundVolumeBase.png">
+      <input type="range" id="slider" name="volume" min="0" max="11">
+      <img id="soundIcon" src="TemplateData/SoundIcon.png">
     </div>
 
     <div id="unity-container" class="unity-desktop">
@@ -78,6 +83,18 @@
         soundButton.style.width = _a.toString() + "px";
         muteButton.style.height = _a.toString() + "px";
         muteButton.style.width = _a.toString() + "px";
+
+        
+        var targetElement = document.getElementById( "soundButton" ) ;
+        var clientRect = targetElement.getBoundingClientRect() ;
+        var x = clientRect.left ;
+        var y = clientRect.top ;
+
+        var volume = document.getElementById( "volume" ) ;
+        var X = parseInt( x ) - ( _a * 0.5 );
+        var stX = X.toString() + "px";
+        volume.style.left = stX;
+        // console.log( _a );
 
         // window.alert( "resize" + _ratio );
       }
