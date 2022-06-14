@@ -119,62 +119,6 @@ body
 
 
 
-#volume
-{
-    pointer-events: auto ;
-    display: flex;    
-    justify-content: center;
-    /* padding-top: 5%; */
-    position: absolute; 
-
-    width: auto;
-    height: 60%;
-
-    z-index: 15; 
-
-    background: white;
-    /* background-image: url( 'SoundVolumeBase.png' );
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center top; */
-
-    left: 200px;
-    top: 50%;
-
-    transform: translate( 0px, -50% );
-
-    text-align: center;
-}
-
-#sliderBg
-{
-    z-index: 16; 
-    position: absolute; 
-    width: auto;
-    height: 120%;
-    transform: translate( 0px, -10% );
-}
-
-#slider
-{
-    z-index: 17; 
-    -webkit-appearance: slider-vertical;    
-    /* transform: translate( 0px, 100px ); */
-    width: auto;
-    height: auto;
-
-}
-
-#soundIcon
-{
-    z-index: 18; 
-    position: absolute; 
-    max-width: 50%;
-    height: auto;
-
-    transform: translate( 0px, 30px );
-}
-
 #buttons
 { 
     pointer-events: none; 
